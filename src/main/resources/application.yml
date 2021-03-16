@@ -1,0 +1,20 @@
+micronaut:
+  application:
+    name: myApp
+  security:
+    enabled: true
+    authentication: bearer
+    endpoints:
+      login:
+        enabled: true
+      oauth:
+        enabled: true
+    token:
+      jwt:
+        generator:
+          refresh-token:
+            secret: 'DB4AEF4719809709E560ED8DE2F9C77B886B963B28BA20E9A8A621BBD4ABA59'
+        signatures:
+          secret:
+            generator:
+              secret: 'DB4AEF4719809709E560ED8DE2F9C77B886B963B28BA20E9A8A621BBD4ABA59'
